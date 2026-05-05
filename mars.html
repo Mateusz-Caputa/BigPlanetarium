@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover Mars — the Red Planet. Learn about its geology, atmosphere, moons, and the missions that have explored it.">
+    <title>Mars — Big Planetarium</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#main-content" class="skip-link btn">Skip to main content</a>
+        <a href="/" class="brand" aria-label="Big Planetarium — home">🪐 Big Planetarium</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/planets.html">Planets</a></li>
+                <li><a href="/mars.html" aria-current="page">Mars</a></li>
+                <li><a href="/visit.html">Visit Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section aria-labelledby="mars-heading">
+            <div class="mars-hero">
+                <img class="mars-hero-img" src="/assets/img/mars.png"
+                    alt="The planet Mars from space: rust-red surface with darker volcanic plateaus, winding valley networks, and a bright white polar ice cap.">
+                <div>
+                    <h1 id="mars-heading">Mars</h1>
+                    <p class="planet-type">Terrestrial Planet &bull; 4th from the Sun</p>
+                    <p class="mt-1">Mars is the fourth planet from the Sun and the second-smallest in
+                        the Solar System. Its striking rust-red colour comes from iron oxide — rust —
+                        on its surface. Despite being far smaller than Earth, Mars is home to the
+                        largest volcano and the longest canyon system in the entire Solar System.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab panel following the WAI-ARIA tabs pattern.
+             aria-selected and tabindex are managed by script.js.
+             Arrow keys navigate between tabs; Tab moves into the panel. -->
+        <section aria-label="Mars information tabs">
+
+            <div role="tablist" aria-label="Mars sections" class="tab-list">
+                <button role="tab" id="tab-overview" aria-selected="true" aria-controls="panel-overview"
+                    class="tab-btn">Overview</button>
+                <button role="tab" id="tab-exploration" aria-selected="false" aria-controls="panel-exploration"
+                    class="tab-btn" tabindex="-1">Exploration</button>
+                <button role="tab" id="tab-facts" aria-selected="false" aria-controls="panel-facts" class="tab-btn"
+                    tabindex="-1">Fast Facts</button>
+            </div>
+
+            <div role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" class="tab-panel">
+                <h2>Overview</h2>
+                <p>Mars has a thin atmosphere composed mostly of carbon dioxide (95%), with traces of
+                    nitrogen and argon. Its surface pressure is less than 1% of Earth's, meaning liquid
+                    water cannot exist there today — though water ice sits at the poles and evidence of
+                    ancient rivers and lakes shows it once flowed freely.</p>
+                <p><strong>Olympus Mons</strong> stands 21.9&nbsp;km above the surrounding plains —
+                    nearly three times the height of Mount Everest — making it the tallest volcano
+                    known in the Solar System. Running roughly along the Martian equator,
+                    <strong>Valles Marineris</strong> is a canyon system over 4,000&nbsp;km long and
+                    up to 7&nbsp;km deep; it would stretch across the entire United States.
+                </p>
+                <p>Mars has two small moons, <strong>Phobos</strong> and <strong>Deimos</strong>,
+                    believed to be captured asteroids. A Martian day (a "sol") lasts 24 hours and
+                    37 minutes — remarkably close to an Earth day — but a Martian year is 687 Earth
+                    days long.</p>
+            </div>
+
+            <div role="tabpanel" id="panel-exploration" aria-labelledby="tab-exploration" class="tab-panel hidden">
+                <h2>Exploration</h2>
+                <p>Mars is the most-explored planet beyond Earth, with more than 50 missions launched
+                    since the 1960s.</p>
+                <ul>
+                    <li><strong>Mariner 4 (1965)</strong> — Returned the first close-up images of Mars,
+                        revealing a barren, crater-covered surface.</li>
+                    <li><strong>Viking 1 &amp; 2 (1976)</strong> — NASA's first successful landers;
+                        conducted soil experiments to test for signs of microbial life.</li>
+                    <li><strong>Mars Pathfinder (1997)</strong> — Deployed Sojourner, the first rover
+                        to operate on another planet.</li>
+                    <li><strong>Spirit &amp; Opportunity (2004)</strong> — Twin rovers that found
+                        compelling evidence of ancient water activity.</li>
+                    <li><strong>Curiosity (2012–present)</strong> — A car-sized rover still active in
+                        Gale Crater, studying the planet's past habitability.</li>
+                    <li><strong>Perseverance (2021–present)</strong> — Collecting rock core samples for
+                        future return to Earth and testing oxygen production from Martian air.</li>
+                    <li><strong>Ingenuity (2021–2024)</strong> — A small helicopter that proved powered
+                        flight is possible in Mars's thin atmosphere.</li>
+                </ul>
+            </div>
+
+            <div role="tabpanel" id="panel-facts" aria-labelledby="tab-facts" class="tab-panel hidden">
+                <h2>Fast Facts</h2>
+                <!-- scope attributes help screen readers associate headers with data cells -->
+                <table>
+                    <caption>Key facts about Mars</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Distance from Sun</td>
+                            <td>227.9 million km (average)</td>
+                        </tr>
+                        <tr>
+                            <td>Diameter</td>
+                            <td>6,779 km (53% of Earth)</td>
+                        </tr>
+                        <tr>
+                            <td>Length of day (sol)</td>
+                            <td>24 hours 37 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Length of year</td>
+                            <td>687 Earth days</td>
+                        </tr>
+                        <tr>
+                            <td>Average surface temperature</td>
+                            <td>&minus;63&deg;C</td>
+                        </tr>
+                        <tr>
+                            <td>Surface gravity</td>
+                            <td>3.72 m/s&sup2; (38% of Earth)</td>
+                        </tr>
+                        <tr>
+                            <td>Number of moons</td>
+                            <td>2 (Phobos &amp; Deimos)</td>
+                        </tr>
+                        <tr>
+                            <td>Atmosphere</td>
+                            <td>95% CO&sub2;, 3% N&sub2;, 2% Ar</td>
+                        </tr>
+                        <tr>
+                            <td>Tallest volcano</td>
+                            <td>Olympus Mons — 21.9 km</td>
+                        </tr>
+                        <tr>
+                            <td>Longest canyon</td>
+                            <td>Valles Marineris — 4,000 km</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <p class="mt-2"><a href="/planets.html">&larr; Back to all planets</a></p>
+
+    </main>
+
+    <footer>
+        &copy; Big Planetarium 2026
+        <hr>
+        Video credits: NASA / ESA. Content/images credits: copilot AI
+    </footer>
+    <script src="/assets/js/script.js"></script>
+
+
+</body>
+
+</html>

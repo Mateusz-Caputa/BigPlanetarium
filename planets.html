@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore all eight planets of our Solar System — from rocky Mercury to icy Neptune. Big Planetarium, Bristol.">
+    <title>Planets of the Solar System — Big Planetarium</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#main-content" class="skip-link btn">Skip to main content</a>
+        <a href="/" class="brand" aria-label="Big Planetarium — home">🪐 Big Planetarium</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/planets.html" aria-current="page">Planets</a></li>
+                <li><a href="/mars.html">Mars</a></li>
+                <li><a href="/visit.html">Visit Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section aria-labelledby="planets-heading">
+            <h1 id="planets-heading">Planets of the Solar System</h1>
+            <p>Our Solar System is home to eight remarkable planets grouped into three families:
+                rocky terrestrial worlds, colossal gas giants, and distant ice giants. Use the
+                filters below to explore each family.</p>
+
+            <!-- aria-pressed on each button communicates active state to screen readers -->
+            <div class="filter-group" role="group" aria-label="Filter planets by type">
+                <button class="filter-btn" data-filter="all" aria-pressed="true">All planets</button>
+                <button class="filter-btn" data-filter="terrestrial" aria-pressed="false">Terrestrial</button>
+                <button class="filter-btn" data-filter="gas-giant" aria-pressed="false">Gas giants</button>
+                <button class="filter-btn" data-filter="ice-giant" aria-pressed="false">Ice giants</button>
+            </div>
+
+            <!-- aria-live announces the visible count after filtering without interrupting speech -->
+            <p id="filter-status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+
+            <!-- role="list" restores list semantics in Safari when list-style is removed -->
+            <ul class="planet-grid" id="planet-list" role="list">
+
+                <li class="planet-card card" data-type="terrestrial">
+                    <img src="/assets/img/mercury.png"
+                        alt="The planet Mercury: a small, heavily cratered grey world with no atmosphere.">
+                    <h2>Mercury</h2>
+                    <p class="planet-type">Terrestrial</p>
+                    <p>The smallest planet and closest to the Sun. With no atmosphere to hold heat,
+                        temperatures swing from 430°C at noon to −180°C at night.</p>
+                </li>
+
+                <li class="planet-card card" data-type="terrestrial">
+                    <img src="/assets/img/venus.png"
+                        alt="The planet Venus: a bright yellowish-white planet shrouded in thick sulphuric acid clouds.">
+                    <h2>Venus</h2>
+                    <p class="planet-type">Terrestrial</p>
+                    <p>The hottest planet in the Solar System despite not being the closest to the Sun.
+                        Its thick atmosphere traps heat in a runaway greenhouse effect.</p>
+                </li>
+
+                <li class="planet-card card" data-type="terrestrial">
+                    <img src="/assets/img/earth.png"
+                        alt="The planet Earth from space: blue oceans, green and brown continents, and swirling white clouds.">
+                    <h2>Earth</h2>
+                    <p class="planet-type">Terrestrial</p>
+                    <p>Our home — the only planet known to support life. Liquid water, a protective
+                        magnetic field, and a breathable atmosphere make Earth uniquely habitable.</p>
+                </li>
+
+                <li class="planet-card card" data-type="terrestrial">
+                    <img src="/assets/img/mars.png"
+                        alt="The planet Mars from space: rust-red surface with darker volcanic regions and a white polar ice cap.">
+                    <h2>Mars</h2>
+                    <p class="planet-type">Terrestrial</p>
+                    <p>The Red Planet is home to Olympus Mons — the tallest volcano in the Solar System —
+                        and a canyon network that dwarfs the Grand Canyon.</p>
+                    <a href="/mars.html" class="btn">Explore Mars</a>
+                </li>
+
+                <li class="planet-card card" data-type="gas-giant">
+                    <img src="/assets/img/jupiter.png"
+                        alt="The planet Jupiter: a massive gas giant banded with cream and orange clouds, with the Great Red Spot storm visible.">
+                    <h2>Jupiter</h2>
+                    <p class="planet-type">Gas giant</p>
+                    <p>The largest planet in the Solar System. Jupiter's Great Red Spot is a storm
+                        that has raged for at least 350 years, wider than planet Earth itself.</p>
+                </li>
+
+                <li class="planet-card card" data-type="gas-giant">
+                    <img src="/assets/img/saturn.png"
+                        alt="The planet Saturn: a golden gas giant encircled by its iconic flat rings of ice and rock.">
+                    <h2>Saturn</h2>
+                    <p class="planet-type">Gas giant</p>
+                    <p>Famous for its stunning ring system, Saturn is made mostly of hydrogen and helium.
+                        Its rings span hundreds of thousands of kilometres yet are only ~10 metres thick.</p>
+                </li>
+
+                <li class="planet-card card" data-type="ice-giant">
+                    <img src="/assets/img/uranus.png"
+                        alt="The planet Uranus: a pale blue-green ice giant that rotates on its side.">
+                    <h2>Uranus</h2>
+                    <p class="planet-type">Ice giant</p>
+                    <p>Uranus rotates on its side — likely the result of a massive ancient collision.
+                        Its blue-green colour comes from methane absorbing red light in its atmosphere.</p>
+                </li>
+
+                <li class="planet-card card" data-type="ice-giant">
+                    <img src="/assets/img/neptune.png"
+                        alt="The planet Neptune: a deep blue ice giant with visible cloud streaks and the Great Dark Spot.">
+                    <h2>Neptune</h2>
+                    <p class="planet-type">Ice giant</p>
+                    <p>The furthest planet from the Sun, Neptune has the fastest winds in the Solar System —
+                        reaching over 2,000&nbsp;km/h. One orbit takes 165 Earth years.</p>
+                </li>
+
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; Big Planetarium 2026
+        <hr>
+        Video credits: NASA / ESA. Content/images credits: copilot AI
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+
+
+</body>
+
+</html>

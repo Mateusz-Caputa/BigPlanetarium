@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plan your visit to Big Planetarium in Bristol. Opening hours, directions, booking form, and accessibility information.">
+    <title>Visit Us — Big Planetarium</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#main-content" class="skip-link btn">Skip to main content</a>
+        <a href="/" class="brand" aria-label="Big Planetarium — home">🪐 Big Planetarium</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/planets.html">Planets</a></li>
+                <li><a href="/mars.html">Mars</a></li>
+                <li><a href="/visit.html" aria-current="page">Visit Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section aria-labelledby="visit-heading">
+            <h1 id="visit-heading">Plan Your Visit</h1>
+            <p>We'd love to welcome you to Big Planetarium in Bristol. Below you'll find our opening
+                hours, directions, a booking form, and answers to common questions. If you have
+                accessibility requirements, please don't hesitate to get in touch.</p>
+        </section>
+
+        <section aria-labelledby="hours-heading">
+            <h2 id="hours-heading">Opening Hours</h2>
+            <table>
+                <caption>Big Planetarium weekly opening hours</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday &ndash; Friday</td>
+                        <td>10:00 &ndash; 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>09:00 &ndash; 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>10:00 &ndash; 16:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="location-heading">
+            <h2 id="location-heading">Getting Here</h2>
+            <!-- <address> marks contact/location information for the organisation -->
+            <address>
+                Big Planetarium<br>
+                1 Observatory Rise<br>
+                Bristol<br>
+                BS1 5SB
+            </address>
+            <p>We are a 5-minute walk from Bristol Temple Meads station. Bus routes 1, 8, and 72
+                stop directly outside. Limited on-site parking is available; we recommend travelling
+                by public transport where possible.</p>
+            <p class="mt-1">The entrance is step-free and clearly signed from the main road.
+                A hearing loop is fitted in the dome and at the ticket desk.</p>
+        </section>
+
+        <section aria-labelledby="book-heading">
+            <h2 id="book-heading">Book or Enquire</h2>
+            <p>Use the form below to book tickets or send us a question. We aim to respond within
+                2 working days.</p>
+
+            <!-- novalidate defers to our JS validation so we control error presentation -->
+            <form id="enquiry-form" novalidate aria-labelledby="book-heading">
+                <fieldset>
+                    <legend>Your details</legend>
+
+                    <div class="form-group">
+                        <label for="name">Full name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address <span aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-type">Type of enquiry</label>
+                        <select id="enquiry-type" name="enquiry-type">
+                            <option value="">Please select&hellip;</option>
+                            <option value="tickets">Book tickets</option>
+                            <option value="schools">School group visit</option>
+                            <option value="accessibility">Accessibility information</option>
+                            <option value="general">General question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    </div>
+
+                    <p class="form-note"><span aria-hidden="true">*</span> Required fields</p>
+
+                    <button type="submit" class="btn">Send message</button>
+                </fieldset>
+
+                <!-- Hidden until submission succeeds; JS removes .hidden and focuses this element -->
+                <div id="form-success" class="form-success hidden" role="status" tabindex="-1">
+                    <p><strong>Message sent!</strong> Thank you for getting in touch. We'll reply
+                        within 2 working days.</p>
+                </div>
+            </form>
+        </section>
+
+        <section aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+            <!-- Accordion: button inside h3 per the ARIA authoring practices.
+                 aria-expanded and panel visibility are toggled by script.js. -->
+            <div class="accordion">
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="faq-children">
+                            Is Big Planetarium suitable for young children?
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden" id="faq-children">
+                        <p>Yes! Our shows are designed to engage visitors of all ages. We recommend
+                            our general shows for children aged 5 and above. Dedicated family sessions
+                            run every Saturday and Sunday morning at 10:30.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="faq-wheelchair">
+                            Is the venue wheelchair accessible?
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden" id="faq-wheelchair">
+                        <p>Yes. The entire building is step-free, with lift access to all floors,
+                            accessible toilets on each level, and reserved wheelchair spaces in the
+                            dome. Please contact us in advance so we can make the best arrangements.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="faq-audio">
+                            Do you offer audio description or BSL interpretation?
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden" id="faq-audio">
+                        <p>Audio-described shows run on the first Sunday of every month. BSL-interpreted
+                            shows are available for group bookings with at least two weeks' notice.
+                            A hearing loop is installed in the dome and at the ticket desk.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="faq-booking">
+                            Do I need to book in advance?
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden" id="faq-booking">
+                        <p>We strongly recommend booking in advance, particularly during school
+                            holidays and weekends. Walk-ins are welcome when space allows, but we
+                            cannot guarantee entry without a reservation.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button class="accordion-btn" aria-expanded="false" aria-controls="faq-schools">
+                            Do you offer school visits?
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                    </h3>
+                    <div class="accordion-panel hidden" id="faq-schools">
+                        <p>We offer curriculum-linked school visits for Key Stages 1 through 4,
+                            covering topics such as the Solar System, light and space, and Earth
+                            science. Group rates are available — select "School group visit" in the
+                            enquiry form above to get started.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; Big Planetarium 2026
+        <hr>
+        Video credits: NASA / ESA. Content/images credits: copilot AI
+
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

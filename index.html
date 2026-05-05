@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Big Planetarium — Bristol's home for fun and accessible space education. Explore the Milky Way and our Solar System.">
+    <title>Big Planetarium — Milky Way Galaxy</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Skip link: off-screen until focused, lets keyboard users jump past navigation -->
+        <a href="#main-content" class="skip-link btn">Skip to main content</a>
+        <a href="/" class="brand" aria-label="Big Planetarium — home">🪐 Big Planetarium</a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="/index.html" aria-current="page">Home</a></li>
+                <li><a href="/planets.html">Planets</a></li>
+                <li><a href="/mars.html">Mars</a></li>
+                <li><a href="/visit.html">Visit Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="card hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Milky Way Galaxy</h1>
+            <p>Our home galaxy contains hundreds of billions of stars — and at least one fascinating
+                planet you already know well. Discover the Solar System with us at Big Planetarium,
+                Bristol's home for fun and accessible space education.</p>
+            <div class="hero-btns">
+                <a href="/planets.html" class="btn">Explore the planets</a>
+                <a href="/visit.html" class="btn-inverse">Plan your visit</a>
+            </div>
+        </section>
+
+        <section aria-labelledby="what-is-heading">
+            <h2 id="what-is-heading">What is the Milky Way?</h2>
+            <p>The Milky Way is the galaxy that contains our Solar System. It is a barred spiral
+                galaxy roughly 100,000 light-years across, made up of around 200 billion stars, vast
+                clouds of gas and dust, and at its centre a supermassive black hole called
+                Sagittarius&nbsp;A*. From a dark sky on Earth, the Milky Way appears as a faint band
+                of light arching across the night sky — that band is our edge-on view of the galaxy's
+                disc. We sit inside it, about two-thirds of the way out from the centre, on a smaller
+                arm called the Orion Spur.</p>
+        </section>
+
+        <section aria-labelledby="tour-heading">
+            <h2 id="tour-heading">A Tour of Our Galaxy</h2>
+            <p>Watch a short visualisation of the Milky Way's structure, produced by the European
+                Space Agency's Gaia mission.</p>
+            <!-- controls is required for keyboard accessibility; captions are embedded in the file -->
+            <video src="/assets/video/milky_way_by_Gaia.mp4" width="640" height="360" controls preload="metadata"
+                aria-label="ESA Gaia visualisation of the Milky Way galaxy structure">
+                Your browser does not support the video element.
+            </video>
+        </section>
+
+        <section aria-labelledby="planets-heading">
+            <h2 id="planets-heading">Featured Planets</h2>
+            <p>Three of our favourite worlds in the Solar System. Each one tells a different story
+                about what a planet can be.</p>
+            <!-- role="list" restores list semantics in Safari when list-style is removed -->
+            <ul class="planet-preview-grid" role="list">
+                <li>
+                    <img src="/assets/img/mars.png"
+                        alt="The planet Mars from space: rust-red surface with darker patches and a white polar ice cap.">
+                    <h3>Mars</h3>
+                    <p>The fourth planet from the Sun, famous for its rusty red colour and the
+                        tallest volcano in the Solar System.</p>
+                    <a href="/mars.html" class="btn mt-1">Discover Mars</a>
+                </li>
+                <li>
+                    <img src="/assets/img/jupiter.png"
+                        alt="The planet Jupiter: a massive gas giant with cream and orange cloud bands and the Great Red Spot storm.">
+                    <h3>Jupiter</h3>
+                    <p>The largest planet in the Solar System — so big that more than 1,300 Earths
+                        could fit inside it.</p>
+                </li>
+                <li>
+                    <img src="/assets/img/saturn.png"
+                        alt="The planet Saturn surrounded by its iconic flat rings made mostly of water ice and rocky debris.">
+                    <h3>Saturn</h3>
+                    <p>The jewel of the Solar System, encircled by spectacular rings made mostly of
+                        water ice and rocky debris.</p>
+                </li>
+            </ul>
+            <p class="mt-2">
+                <a href="/planets.html">View all eight planets &rarr;</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; Big Planetarium 2026
+        <hr>
+        Video credits: NASA / ESA. Content/images credits: copilot AI
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+
+</body>
+
+</html>
